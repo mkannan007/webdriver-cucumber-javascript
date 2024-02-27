@@ -33,7 +33,16 @@ steps:
    publishLocation: pipeline
   condition: succeededOrFailed()
 
-- task: PublishCucumberReport@1
+# - task: PublishCucumberReport@1
+#   displayName: 'Publish Cucumber Report'
+#   inputs:
+#     jsonDir: test/target
+#     outputPath: test/target
+#     name: 'Functional Tests'
+#     reportSuiteAsScenarios: true
+#     title: WDIO cucumber report
+
+- task: PublishMultipleCucumberReport@1
   displayName: 'Publish Cucumber Report'
   inputs:
     jsonDir: test/target
