@@ -61,7 +61,12 @@ export const config = {
       browserName: "chrome",
       acceptInsecureCerts: true,
       "goog:chromeOptions": {
-        args: ["start-maximized"],
+        args: ["start-maximized", 
+        "--headless",
+        "--disable-gpu",
+        "--disable-dev-shm-usage",
+        "--no-sandbox",
+      ],
       },
     },
     // {
