@@ -33,22 +33,21 @@ steps:
    publishLocation: pipeline
   condition: succeededOrFailed()
 
-- task: PublishHtmlReport@1
-  displayName: 'Publish HTML Report'
-  inputs:
-   reportDir: test/target/index.html
-   tabName: 'Test HTML'
-  condition: succeededOrFailed()
-
 - task: PublishMultipleCucumberReport@1
   displayName: 'Publish Cucumber Report'
   inputs:
-    jsonDir: test/target
-    outputPath: test/target
-    metadata: |
-     {
-       "ApplicationUrl": "https://www.saucedemo.com/"
-     }
+    jsonDir: 'test/target'
+    outputPath: 'test/target'
     name: 'Functional Tests'
-    title: WebdriverIO Cucumber Report
-  condition: succeededOrFailed()
+    reportSuiteAsScenarios: true
+    title: WDIO cucumber report
+  # inputs:
+  #   jsonDir: test/target
+  #   outputPath: test/target
+  #   metadata: |
+  #    {
+  #      "ApplicationUrl": "https://www.saucedemo.com/"
+  #    }
+  #   name: 'Functional Tests'
+  #   title: WebdriverIO Cucumber Report
+  # condition: succeededOrFailed()
