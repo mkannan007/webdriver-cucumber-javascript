@@ -1,4 +1,4 @@
-# EON Tech Test Automation Framework Setup
+# WDIO Tech Test Automation Framework Setup
 ## Installation required on local machine
 
 1.  Install the latest stable version of java.
