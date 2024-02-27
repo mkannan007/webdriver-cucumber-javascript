@@ -83,7 +83,7 @@ export const config = {
   //
   // Level of logging verbosity: trace | debug | info | warn | error | silent
   logLevel: "info",
-  outputDir: pathToLogs,
+  // outputDir: pathToLogs,
   //
   // Set specific log levels per logger
   // loggers:
