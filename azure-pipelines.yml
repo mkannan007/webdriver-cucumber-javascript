@@ -39,3 +39,16 @@ steps:
    reportDir: test/target/index.html
    tabName: 'Test HTML'
   condition: succeededOrFailed()
+
+- task: PublishMultipleCucumberReport@1
+  displayName: 'Publish Cucumber Report'
+  inputs:
+    jsonDir: test/target
+    outputPath: test/target
+    metadata: |
+     {
+       "ApplicationUrl": "https://www.saucedemo.com/"
+     }
+    name: 'Functional Tests'
+    title: WebdriverIO Cucumber Report
+  condition: succeededOrFailed()
