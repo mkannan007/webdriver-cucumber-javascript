@@ -36,8 +36,8 @@ steps:
 - task: PublishCucumberReport@1
   displayName: 'Publish Cucumber Report'
   inputs:
-    jsonDir: './results/cucumber'
-    outputPath: './results/cucumber'
+    jsonDir: test/target
+    outputPath: test/target
     name: 'Functional Tests'
     reportSuiteAsScenarios: true
     title: WDIO cucumber report

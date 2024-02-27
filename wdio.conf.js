@@ -175,7 +175,7 @@ export const config = {
     // <boolean> abort the run on first failure
     failFast: false,
     // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
-    format: ["pretty", "json:./results/cucumber.json"],
+    format: ["pretty"],
     // <string[]> Only execute the scenarios with name matching the expression (repeatable).
     name: [],
     // <boolean> hide step definition snippets for pending steps
