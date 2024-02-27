@@ -36,18 +36,8 @@ steps:
 - task: PublishMultipleCucumberReport@1
   displayName: 'Publish Cucumber Report'
   inputs:
-    jsonDir: 'test/target'
-    outputPath: 'test/target'
+    jsonDir: './results/cucumber'
+    outputPath: './results/cucumber'
     name: 'Functional Tests'
     reportSuiteAsScenarios: true
     title: WDIO cucumber report
-  # inputs:
-  #   jsonDir: test/target
-  #   outputPath: test/target
-  #   metadata: |
-  #    {
-  #      "ApplicationUrl": "https://www.saucedemo.com/"
-  #    }
-  #   name: 'Functional Tests'
-  #   title: WebdriverIO Cucumber Report
-  # condition: succeededOrFailed()
