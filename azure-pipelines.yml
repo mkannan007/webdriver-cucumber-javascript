@@ -33,7 +33,7 @@ steps:
    publishLocation: pipeline
   condition: succeededOrFailed()
 
-- task: PublishMultipleCucumberReport@1
+- task: PublishCucumberReport@1
   displayName: 'Publish Cucumber Report'
   inputs:
     jsonDir: './results/cucumber'
